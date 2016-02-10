@@ -1,8 +1,20 @@
-import {Component} from 'angular2/core';
+import {Component} from 'angular2/core'
+import {BootieListComponent} from './bootie.component'
+
 
 @Component({
   selector: 'doge-app',
-  template: '<h1>My Doge App</h1>'
+  template: `<h2>{{title}}</h2>
+
+    <h3>Much booties WOW!</h3>
+
+    <doge-bootie>Loading a list of doge booties</doge-bootie>
+    `,
+  directives: [BootieListComponent]
+
 })
 
-export class AppComponent {}
+export class AppComponent {
+  public title = 'Doge Booties'
+
+}
