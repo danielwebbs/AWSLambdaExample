@@ -12,6 +12,9 @@ var booties: Bootie[] = [
 @Injectable()
 export class BootieService {
   getBooties() {
-    return booties
+    // return Promise.resolve(booties)
+    return new Promise<Bootie[]>(resolve =>
+      setTimeout(()=>resolve(booties), 500) // .5 seconds
+    );
   }
 }

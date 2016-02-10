@@ -26,7 +26,8 @@ export class BootieListComponent implements OnInit {
   }
 
   getBooties() {
-    this.booties = this._bootieService.getBooties()
+    this._bootieService.getBooties()
+        .then(booties => this.booties = booties)
   }
 
   ngOnInit(){

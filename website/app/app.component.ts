@@ -8,7 +8,7 @@ import {BootieListComponent} from './bootie-list.component'
 
     <h3>Much booties WOW!</h3>
 
-    <doge-bootie>Loading a list of doge booties</doge-bootie>
+    <doge-bootie>Loading a list of doge booties...</doge-bootie>
     `,
   directives: [BootieListComponent]
 
