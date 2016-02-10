@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core'
-import {BootieListComponent} from './bootie.component'
+import {BootieListComponent} from './bootie-list.component'
 
 
 @Component({
