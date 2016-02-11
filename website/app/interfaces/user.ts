@@ -1,4 +1,4 @@
-export interface iRegistration{
+export interface User{
   firstNames: string
   lastName: string
   email: string
