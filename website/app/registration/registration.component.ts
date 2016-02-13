@@ -1,31 +1,39 @@
 import {Component} from 'angular2/core'
-import User from './../interfaces/user'
+import {iUser} from './../interfaces/user'
+import {UserService} from '../services/user.service'
 @Component({
   selector: 'sign-up-page',
-  template: `  <div><label>{{message}}</label></div>
+  template: `  <div><label>Place Holder</label></div>
       <div>
       <label>First Names:</label>
       <input [(ngModel)] = "customer.firstNames"/>
       <label>Last Name: </label>
       <input [(ngModel)] = "customer.lastName"/>
-      <label>Email: </label>
+      <label> Email: </label>
       <input [(ngModel)] = "customer.email"/>
-      <label>Password: </label>
+      <label>Password</label>
       <input [(ngModel)] = "customer.password"/>
-      <input type ="button" value="Submit" (click)= "updateMessage()"/>
-  </div>
-`
+      <input type = "submit" value = "Register" (click) = "createCustomer(customer)"/>
+  </div>`,
+  providers: [UserService]
 })
 
 export class RegistrationComponent{
-  message:string
-  constructor(){
-    this.message = "Not submitted"
+  constructor(private _userService: UserService){
   }
-public customer: User.User
+  //Can't initialize a interface with new()
+  public customer: iUser = {
+    "firstNames":"",
+    "lastName": "",
+    "email": "",
+    "password":""
+  }
 
-updateMessage(){
-  this.message = "Submitted, Thank You!"
-} 
+  createCustomer(customer: iUser) {
+    this._userService.createUser(customer)
+  }
+  // getCustomer(): void{
+  //   this.customer = this._userService.getUser()
+  // }
 
 }
