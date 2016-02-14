@@ -1,21 +1,12 @@
 import {Component} from 'angular2/core'
-import {iUser} from './../interfaces/user'
+import {iUser} from '../interfaces/user'
 import {UserService} from '../services/user.service'
+
+
 @Component({
-  selector: 'sign-up-page',
-  template: `  <div><label>Place Holder</label></div>
-      <div>
-      <label>First Names:</label>
-      <input [(ngModel)] = "customer.firstNames"/>
-      <label>Last Name: </label>
-      <input [(ngModel)] = "customer.lastName"/>
-      <label> Email: </label>
-      <input [(ngModel)] = "customer.email"/>
-      <label>Password</label>
-      <input [(ngModel)] = "customer.password"/>
-      <input type = "submit" value = "Register" (click) = "createCustomer(customer)"/>
-  </div>`,
-  providers: [UserService]
+  selector: 'registration',
+  templateUrl: 'app/registration/registration.component.html'
+  // templateUrl:'C:/Users/dwebb/_Dev/angularexample/AWSLambdaExample/website/app/registration/registration.component.html'
 })
 
 export class RegistrationComponent{
@@ -32,8 +23,9 @@ export class RegistrationComponent{
   createCustomer(customer: iUser) {
     this._userService.createUser(customer)
   }
+  //Promise example: not to be used
   // getCustomer(): void{
-  //   this.customer = this._userService.getUser()
+  //   this._userService.getUsers().then(users => this.customer = users)
   // }
 
 }

@@ -4,12 +4,11 @@ import {iUser} from '../interfaces/user'
 
 @Injectable()
 export class UserService {
-    getUser(): iUser {
-      return MOCKUSERS[0]
+    getUsers() {
+      return Promise.resolve(MOCKUSERS)
     }
 
     createUser(user: iUser): boolean {
-      //Add API call here
       if(user){
         return true
       }

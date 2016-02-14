@@ -3,4 +3,3 @@ import {AppComponent} from './app.component'
 import {RegistrationComponent} from './registration/registration.component';
 
 bootstrap(AppComponent)
-bootstrap(RegistrationComponent)
