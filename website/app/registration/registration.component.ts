@@ -6,7 +6,6 @@ import {UserService} from '../services/user.service'
 @Component({
   selector: 'registration',
   templateUrl: 'app/registration/registration.component.html'
-  // templateUrl:'C:/Users/dwebb/_Dev/angularexample/AWSLambdaExample/website/app/registration/registration.component.html'
 })
 
 export class RegistrationComponent{

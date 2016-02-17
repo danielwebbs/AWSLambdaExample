@@ -1,15 +1,40 @@
-<div>
+<div class="columns">
+  <div class="column is-offset-1 is-11">
   <h3>Please enter your information</h3>
 </div>
-<div>
-  <label>First Names:</label>
-  <input [(ngModel)]="customer.firstNames"/>
-  <label>Last Name:
-  </label>
-  <input [(ngModel)]="customer.lastName"/>
-  <label>Email:</label>
-  <input [(ngModel)]="customer.email"/>
-  <label>Password</label>
-  <input [(ngModel)]="customer.password"/>
-  <!-- <input type="submit" value="Register" (click)="createCustomer(customer)"/> -->
+</div>
+<div class="columns">
+  <div class="column is-offset-1 is-6">
+    <label>First Names:</label>
+  </div>
+  <div class="column is-6">
+    <input [(ngModel)]="customer.firstNames" />
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-6">
+    <label>Last Name:</label>
+  </div>
+  <div class="column is-6">
+    <input [(ngModel)]="customer.lastName" />
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-6">
+    <label>Email:</label>
+  </div>
+  <div class="column is-6">
+    <input [(ngModel)]="customer.email" />
+  </div>
+</div>
+<div class="columns">
+  <div class="column is-6">
+    <label>Password</label>
+  </div>
+  <div class="column is-6">
+    <input [(ngModel)]="customer.password" />
+  </div>
+</div>
+<div class="columns">
+  <a class="button is-primary" (click)="createCustomer(customer)">Sign Up</a>
 </div>
