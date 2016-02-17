@@ -5,7 +5,8 @@ import {UserService} from '../services/user.service'
 
 @Component({
   selector: 'registration',
-  templateUrl: 'app/registration/registration.component.html'
+  templateUrl: 'app/registration/registration.component.html',
+  styleUrls: ['app/styles/registration.component.css']
 })
 
 export class RegistrationComponent{
@@ -21,6 +22,10 @@ export class RegistrationComponent{
 
   createCustomer(customer: iUser) {
     this._userService.createUser(customer)
+  }
+
+  cancelRegistration(){
+
   }
   //Promise example: not to be used
   // getCustomer(): void{
